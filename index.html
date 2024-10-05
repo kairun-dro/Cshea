@@ -5,38 +5,44 @@
     <meta charset="UTF - 8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cshea Company</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
         /* 全局样式 */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', Arial, sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+            background-color: #f4f4f4;
+            background-image: url('https://i.imgur.com/6y3U78T.jpg'); /* 替换为你自己的背景纹理图片或使用CSS生成的图案 */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
         }
 
         /* 头部样式 */
         header {
-            background-color: #007BFF; /* 蓝色主题色 */
+            background: linear-gradient(135deg, #007BFF, #0056b3); /* 调整头部背景渐变 */
             color: white;
             text-align: center;
             padding: 30px;
             position: relative;
             animation: fadeInDown 1s;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* 添加阴影增加立体感 */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         }
 
         header h1 {
             margin: 0;
-            text-transform: uppercase; /* 将标题字母大写，增加科技感 */
-            letter-spacing: 2px; /* 增加字母间距 */
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
 
         /* 公司简介部分样式 */
         #about {
             padding: 30px;
             margin: 30px;
-            background-color: white;
+            background-color: rgba(255, 255, 255, 0.9); /* 半透明背景，增加层次感 */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
             transition: transform 0.3s ease - in - out;
@@ -50,7 +56,7 @@
         #services {
             padding: 30px;
             margin: 30px;
-            background-color: white;
+            background-color: rgba(255, 255, 255, 0.9);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
             transition: transform 0.3s ease - in - out;
@@ -76,11 +82,19 @@
             background-color: #f9f9f9;
         }
 
+        ul li::before {
+            content: '\f085'; /* Font Awesome图标代码，这里是一个齿轮图标，可以替换为其他合适的图标 */
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            margin-right: 10px;
+            color: #007BFF;
+        }
+
         /* 联系信息样式 */
         #contact {
             padding: 30px;
             margin: 30px;
-            background-color: white;
+            background-color: rgba(255, 255, 255, 0.9);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
             transition: transform 0.3s ease - in - out;
@@ -103,9 +117,29 @@
             }
         }
 
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
         /* 页尾样式 */
         footer {
-            background-color: #007BFF;
+            background: linear-gradient(135deg, #007BFF, #0056b3);
             color: white;
             text-align: center;
             padding: 20px;
@@ -130,7 +164,7 @@
         <p>Cshea is a new micro-company focused on programming and developing software tools. Although there are no products available at present, it is full of vitality and ambition.</p>
         <p>Programming is the cornerstone of our software tools. It is a magical art, a process of deep thinking and creation. Our programmers use various programming languages, from the classic C language to modern Python and Java for cross-platform development, carefully crafting each line of code to build the underlying architecture, user interface, and optimize algorithms, transforming complex business logic into instructions that computers can understand and execute.</p>
         <p>We understand the power of software tools and their significant role in various fields. We aim to create a series of software tools that will bring about changes in different areas. Our team members come from diverse backgrounds, united by their passion for programming and software tools. The team consists of experienced senior programmers and innovative young talents. We emphasize cooperation and sharing, through brainstorming, sharing of experiences and techniques, and showcasing creative sketches, we consider and improve the software tools from multiple perspectives.</p>
-        <p>We also face many challenges. In the technical field, programming technologies are evolving rapidly. We address this by establishing a comprehensive learning mechanism, including regular participation in technical training, following industry trends, and engaging in open-source projects. In the market, the software tools market is highly competitive. We focus on niche areas, exploring unmet user needs, and providing personalized and professional software tools to stand out.</p>
+        <p>We also face many challenges. In the technical field, programming technologies are evolving rapidly. We address this by establishing a technical mechanism, including regular participation in technical training, following industry trends, and engaging in open-source projects. In the market, the software tools market is highly competitive. We focus on niche areas, exploring unmet user needs, and providing personalized and professional software tools to stand out.</p>
         <p>In the future, we plan to introduce software tool products starting from some small but well-defined fields, such as data analysis tools for specific industries. As the company grows, we will expand our product line, build a complete software tool ecosystem, and engage in cooperation, including technical cooperation with large enterprises and resource sharing with small start-ups, continuously advancing in the journey of software tool development.</p>
     </section>
     <!-- 服务列表 -->
@@ -143,3 +177,15 @@
         </ul>
     </section>
     <!-- 联系信息 -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: 3630946614@qq.com</p>
+        <p>Phone+86: 18155667125</p>
+    </section>
+    <!-- 页尾 -->
+    <footer>
+        <p>&copy; 2023 Cshea Company. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
