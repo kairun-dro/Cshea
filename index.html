@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF - 8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="1=device-width, initial-scale=1.0">
     <title>Cshea Company</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -23,7 +23,7 @@
 
         /* 头部样式 */
         header {
-            background: linear-gradient(135deg, #007BFF, #0056b3); /* 调整头部背景渐变 */
+            background: linear-gradient(135deg, #007BFF, #0056b3);
             color: white;
             text-align: center;
             padding: 30px;
@@ -42,7 +42,7 @@
         #about {
             padding: 30px;
             margin: 30px;
-            background-color: rgba(255, 255, 255, 0.9); /* 半透明背景，增加层次感 */
+            background-color: rgba(255, 255, 255, 0.9);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
             transition: transform 0.3s ease - in - out;
@@ -83,7 +83,7 @@
         }
 
         ul li::before {
-            content: '\f085'; /* Font Awesome图标代码，这里是一个齿轮图标，可以替换为其他合适的图标 */
+            content: '\f085';
             font-family: 'Font Awesome 5 Free';
             font-weight: 900;
             margin-right: 10px;
@@ -95,46 +95,16 @@
             padding: 30px;
             margin: 30px;
             background-color: rgba(255, 255, 255, 0.9);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            transition: transform 0.3s ease - in - out;
+            box-shadow: 0 4px 8 Recruiting{
+            display: none;
         }
 
-        #contact:hover {
-            transform: translateY(-5px);
+        #recruiting-trigger {
+            cursor: pointer;
         }
 
-        /* 动画效果 */
-        @keyframes fadeInDown {
-            0% {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-
-            to {
-                opacity: 1;
-            }
-        }
-
-        @keyframes rotate {
-            from {
-                transform: rotate(0deg);
-            }
-
-            to {
-                transform: rotate(360deg);
-            }
+        #recruiting-trigger:hover + #recruiting {
+            display: block;
         }
 
         /* 页尾样式 */
@@ -180,7 +150,7 @@
     <section id="contact">
         <h2>Contact Us</h2>
         <p>Email: 3630946614@qq.com</p>
-        <p>Phone+86: 18155667125</p>
+        <p>Phone: 18155667125</p>
     </section>
     <!-- 页尾 -->
     <footer>
