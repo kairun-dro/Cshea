@@ -95,16 +95,46 @@
             padding: 30px;
             margin: 30px;
             background-color: rgba(255, 255, 255, 0.9);
-            box-shadow: 0 4px 8 Recruiting{
-            display: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            transition: transform 0.3s ease - in - out;
         }
 
-        #recruiting-trigger {
-            cursor: pointer;
+        #contact:hover {
+            transform: translateY(-5px);
         }
 
-        #recruiting-trigger:hover + #recruiting {
-            display: block;
+        /* 动画效果 */
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
         }
 
         /* 页尾样式 */
@@ -120,10 +150,37 @@
         footer p {
             margin: 0;
         }
+
+        /* 加载动画样式 */
+        #loader {
+            border: 12px solid #f3f3f3;
+            border-top: 12px solid #007BFF;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            animation: spin 2s linear infinite;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            margin-top: -50px;
+            margin-left: -50px;
+            z-index: 9999;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
     </style>
 </head>
 
 <body>
+    <div id="loader"></div>
     <!-- 头部 -->
     <header>
         <h1>Cshea Company</h1>
@@ -132,9 +189,9 @@
     <section id="about">
         <h2>About Us</h2>
         <p>Cshea is a new micro-company focused on programming and developing software tools. Although there are no products available at present, it is full of vitality and ambition.</p>
-        <p>Programming is the cornerstone of our software tools. It is a magical art, a process of deep thinking and creation. Our programmers use various programming languages, from the classic C language to modern Python and Java for cross-platform development, carefully crafting each line of code to build the underlying architecture, user interface, and optimize algorithms, transforming complex business logic into instructions that computers can understand and execute.</p>
+        <p>Programming is the cornerstone of our software tools. It is a magical art, a process of deep thinking and creation. Our programmers use various programming languages, from the classic C language to modern Python and Java for cross-platform development, carefully crafting each line of code to build the underlying architecture, user interface, and optimize algorithms, transforming complex business logic into instructions that computers can理解和执行的指令。 Our programmers use various programming languages, from the classic C language to modern Python and Java for cross-platform development, carefully crafting each line of code to build the underlying architecture, user interface, and optimize algorithms, transforming complex business logic into instructions that computers can understand and execute.</p>
         <p>We understand the power of software tools and their significant role in various fields. We aim to create a series of software tools that will bring about changes in different areas. Our team members come from diverse backgrounds, united by their passion for programming and software tools. The team consists of experienced senior programmers and innovative young talents. We emphasize cooperation and sharing, through brainstorming, sharing of experiences and techniques, and showcasing creative sketches, we consider and improve the software tools from multiple perspectives.</p>
-        <p>We also face many challenges. In the technical field, programming technologies are evolving rapidly. We address this by establishing a technical mechanism, including regular participation in technical training, following industry trends, and engaging in open-source projects. In the market, the software tools market is highly competitive. We focus on niche areas, exploring unmet user needs, and providing personalized and professional software tools to stand out.</p>
+        <p>We also face many challenges. In the technical field, programming technologies are evolving rapidly. We address this by establishing a technical mechanism, including regular participation in technical training, following industry trends, and engaging in open-source projects. In the market, the software tools市场竞争激烈。 We focus on niche areas, exploring unmet user needs, and providing personalized and professional software tools to stand out.</p>
         <p>In the future, we plan to introduce software tool products starting from some small but well-defined fields, such as data analysis tools for specific industries. As the company grows, we will expand our product line, build a complete software tool ecosystem, and engage in cooperation, including technical cooperation with large enterprises and resource sharing with small start-ups, continuously advancing in the journey of software tool development.</p>
     </section>
     <!-- 服务列表 -->
@@ -143,19 +200,25 @@
         <ul>
             <li>Develop software products such as data analysis tools for specific industries.</li>
             <li>Build a complete software tool ecosystem to enable collaboration between different software tools.</li>
-            <li>Provide technical cooperation and resource sharing services.</li>
+            <li>提供技术合作与资源共享服务。 Provide technical cooperation and resource sharing services.</li>
         </ul>
     </section>
     <!-- 联系信息 -->
     <section id="contact">
         <h2>Contact Us</h2>
         <p>Email: 3630946614@qq.com</p>
-        <p>Phone: 18155667125</p>
+        <p>Phone+86: 18155667125</p>
     </section>
     <!-- 页尾 -->
     <footer>
         <p>&copy; 2023 Cshea Company. All rights reserved.</p>
     </footer>
+    <script>
+        window.onload = function () {
+            var loader = document.getElementById('loader');
+            loader.style.display = 'none';
+        };
+    </script>
 </body>
 
 </html>
