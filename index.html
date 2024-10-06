@@ -50,6 +50,33 @@
 
         #about:hover {
             transform: translateY(-5px);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* 悬停时阴影增强 */
+            border-color: #FFD700; /* 悬停时边框颜色改变 */
+        }
+
+        /* 在公司简介中为编程语言添加图标 */
+        #about p:contains("Python")::after {
+            content: '\f189';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            margin-left: 5px;
+            color: #FFD700;
+        }
+
+        #about p:contains("Java")::after {
+            content: '\f0f4';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            margin-left: 5px;
+            color: #FFD700;
+        }
+
+        #about p:contains("C language")::after {
+            content: '\f121';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            margin-left: 5px;
+            color: #FFD700;
         }
 
         /* 服务列表样式 */
@@ -60,10 +87,12 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
             transition: transform 0.3s ease - in - out;
+            background-color: #E6F7FF; /* 淡蓝色背景 */
         }
 
         #services:hover {
             transform: translateY(-5px);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
         }
 
         ul {
@@ -80,6 +109,7 @@
 
         ul li:hover {
             background-color: #f9f9f9;
+            color: #007BFF; /* 悬停时文字颜色改变 */
         }
 
         ul li::before {
@@ -90,6 +120,11 @@
             color: #007BFF;
         }
 
+        ul li:hover::before {
+            transform: scale(1.2); /* 悬停时图标放大 */
+            color: #FFD700;
+        }
+
         /* 联系信息样式 */
         #contact {
             padding: 30px;
@@ -98,10 +133,12 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
             transition: transform 0.3s ease - in - out;
+            background-color: #F4F4F4; /* 淡灰色背景 */
         }
 
         #contact:hover {
             transform: translateY(-5px);
+            box-shadow: 0 0 10xrgba(0, 0, 0, 0.3);
         }
 
         /* 动画效果 */
@@ -163,7 +200,7 @@
             top: 50%;
             left: 50%;
             margin-top: -50px;
-            margin-left: -50px;
+            marginLeft: -50px;
             z-index: 9999;
         }
 
@@ -175,6 +212,70 @@
             100% {
                 transform: rotate(360deg);
             }
+        }
+
+        /* 页面角落的动画元素样式 */
+        #fun-element {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 30px;
+            height: 30px;
+            background-color: #007BFF;
+            border-radius: 50%;
+            animation: blink 2s linear infinite;
+        }
+
+        @keyframes blink {
+            0% {
+                opacity: 0.5;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0.5;
+            }
+        }
+
+        /* 鼠标悬停彩蛋区域样式 */
+        #egg-area {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 50px;
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        #egg-area:hover::after {
+            content: "你发现了一个彩蛋！点击这里查看更多有趣内容。";
+            position: absolute;
+            top: -30px;
+            left: 0;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        /* 分享按钮样式 */
+        #share-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #FFD700;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background - color 0.3s ease - in - out;
+        }
+
+        #share-button:hover {
+            background-color: #FFA500;
         }
     </style>
 </head>
@@ -189,10 +290,10 @@
     <section id="about">
         <h2>About Us</h2>
         <p>Cshea is a new micro-company focused on programming and developing software tools. Although there are no products available at present, it is full of vitality and ambition.</p>
-        <p>Programming is the cornerstone of our software tools. It is a magical art, a process of deep thinking and creation. Our programmers use various programming languages, from the classic C language to modern Python and Java for cross-platform development, carefully crafting each line of code to build the underlying architecture, user interface, and optimize algorithms, transforming complex business logic into instructions that computers can理解和执行的指令。 Our programmers use various programming languages, from the classic C language to modern Python and Java for cross-platform development, carefully crafting each line of code to build the underlying architecture, user interface, and optimize algorithms, transforming complex business logic into instructions that computers can understand and execute.</p>
+        <p>Programming is the cornerstone of our software tools. It is a magical art, a process of deep thinking and creation. Our programmers use various programming languages, from the classic C language to modern Python and Java for cross-platform development, carefully crafting each line of code to build the underlying architecture, user interface, and optimize algorithms, transforming complex business logic into instructions that computers can understand and execute.</p>
         <p>We understand the power of software tools and their significant role in various fields. We aim to create a series of software tools that will bring about changes in different areas. Our team members come from diverse backgrounds, united by their passion for programming and software tools. The team consists of experienced senior programmers and innovative young talents. We emphasize cooperation and sharing, through brainstorming, sharing of experiences and techniques, and showcasing creative sketches, we consider and improve the software tools from multiple perspectives.</p>
-        <p>We also face many challenges. In the technical field, programming technologies are evolving rapidly. We address this by establishing a technical mechanism, including regular participation in technical training, following industry trends, and engaging in open-source projects. In the market, the software tools市场竞争激烈。 We focus on niche areas, exploring unmet user needs, and providing personalized and professional software tools to stand out.</p>
-        <p>In the future, we plan to introduce software tool products starting from some small but well-defined fields, such as data analysis tools for specific industries. As the company grows, we will expand our product line, build a complete software tool ecosystem, and engage in cooperation, including technical cooperation with large enterprises and resource sharing with small start-ups, continuously advancing in the journey of software tool development.</p>
+        <p>We also face many challenges. In the technical field, programming technologies are evolving rapidly. We address this by establishing a technical mechanism, including regular participation in technical training, following industry trends, and engaging in open-source projects. In the market, the software tools market is highly competitive. We focus on niche areas, exploring unmet user needs, and providing personalized and professional software tools to stand out.</p>
+        <p>In the future, we plan to introduce software tool products starting from some small but well-defined fields, such as data analysis tools for specific industries. As the company grows, we will expand our product line, build a complete software tool ecosystem, and engage in合作， including technical cooperation with large enterprises and resource sharing with small start-ups, continuously advancing in the journey of software tool development.</p>
     </section>
     <!-- 服务列表 -->
     <section id="services">
@@ -200,12 +301,12 @@
         <ul>
             <li>Develop software products such as data analysis tools for specific industries.</li>
             <li>Build a complete software tool ecosystem to enable collaboration between different software tools.</li>
-            <li>提供技术合作与资源共享服务。 Provide technical cooperation and resource sharing services.</li>
+            <li>Provide technical cooperation and resource sharing services.</li>
         </ul>
     </section>
     <!-- 联系信息 -->
     <section id="contact">
-        <h2>Contact Us</h2>
+        <h2>Contact Us</h = "Contact Us">
         <p>Email: 3630946614@qq.com</p>
         <p>Phone+86: 18155667125</p>
     </section>
